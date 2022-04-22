@@ -10,7 +10,14 @@ public class Main {
         //Сравниваем коробки extends Number
         System.out.println(intBox1.compareAverage(intBox2));
         System.out.println(floatBox1.compareAverage(floatBox2));
+
         //Сравниваем объекты разных типов
         System.out.println(intBox1.compareAverage(floatBox1));
+
+        //Возвращает текующую дату
+        System.out.println(Utils._DateAndTime.getCurrentDateTime());
+
+        //Делаем скрин экрана, файл сохраняется в "src/main/resources/"
+        Utils.screenShot();
     }
 }
