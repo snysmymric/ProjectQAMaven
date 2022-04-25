@@ -1,12 +1,14 @@
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+
 public class TestClass {
     @Test
     public static void testBetterThanAverage1() {
         boolean actualResult =
-                CodeWars.betterThanAverage(new int[]{2, 3}, 5);
-        Assert.assertEquals(actualResult, true);
+                CodeWars.betterThanAverage(new int[]{2,3}, 5);
+        Assert.assertEquals(actualResult,true);
+
     }
 
     @Test

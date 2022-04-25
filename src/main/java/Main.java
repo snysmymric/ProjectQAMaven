@@ -1,6 +1,8 @@
+import org.apache.commons.lang3.StringUtils;
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-
         //Example
         BoxWithNumbers<Integer> intBox1 = new BoxWithNumbers<>(1, 2, 3, 4, 5);
         BoxWithNumbers<Integer> intBox2 = new BoxWithNumbers<>(1, 2, 3, 4, 5);
