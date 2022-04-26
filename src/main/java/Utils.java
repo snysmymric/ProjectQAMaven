@@ -1,4 +1,6 @@
 
+import org.apache.commons.lang3.StringUtils;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -46,7 +48,8 @@ public class Utils {
 
     public static void screenShot() {
         try {
-            ImageIO.write(Objects.requireNonNull(grabScreen()), "jpg", new File(getFilePath(), "screen.jpg"));
+            ImageIO.write(Objects.requireNonNull(grabScreen()), "jpg",
+                    new File(getFilePath(), "screen.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -54,5 +57,9 @@ public class Utils {
 
     public static void print(String str) {
         System.out.println(str);
+    }
+
+    public static String[] strToArray (String str) {
+        return StringUtils.split(str);
     }
 }
