@@ -16,10 +16,36 @@ public class CodeWars {
             return false;
         }
     }
+    
+    public static int[] arraySort(int[] array) {
+        boolean isSorted = false;
+        while (!isSorted) {
+            isSorted = true;
+            for (int i = 1; i < array.length; i++) {
+                if (array[i] < array[i -1]) {
+                    int temp = array[i];
+                    array[i] = array[i-1];
+                    array[i-1] = temp;
+                    isSorted = false;
+                }
+            }
+        }
 
+        return array;
+    }
 
+    public static <T> boolean equalsArray(T[] array1, T[] array2) {
+        if (array1.length != array2.length) {
+            return false;
+        }
+        for (int i = 0; i < array1.length; i++) {
+            if (!array1[i].equals(array2[i])) {
+                return false;
+            }
+        }
 
-
+        return true;
+    }
     public static void main(String[] args) {
 
     }
